@@ -1,5 +1,7 @@
 # webspace
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/SimonHaas/webspace?quickstart=1)
+
 [Codespaces](https://github.com/features/codespaces) + webtop = ❤
 
 Get a remote session to a full linux desktop from within your current browser without installing any software on your current device.
