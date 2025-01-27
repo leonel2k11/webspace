@@ -1,5 +1,5 @@
 FROM lscr.io/linuxserver/webtop:latest
 
-RUN apk update
-RUN apk add git
-RUN mkdir /usr/local/sbin
+RUN apk update && \
+    apk add git firefox && \
+    mkdir /usr/local/sbin
