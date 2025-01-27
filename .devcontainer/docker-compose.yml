@@ -8,8 +8,8 @@ services:
       - ..:/workspace:cached
 
   webtop:
-    image: lscr.io/linuxserver/webtop:latest
-    #build: .
+    # image: lscr.io/linuxserver/webtop:latest
+    build: .
     container_name: webtop
     security_opt:
       - seccomp:unconfined #optional
@@ -21,7 +21,6 @@ services:
       - TITLE=Webtop #optional
     ports:
       - 3000:3000
-      #- 3001:3001
     # devices:
     #  - /dev/dri:/dev/dri #optional
     shm_size: "1gb" #optional
