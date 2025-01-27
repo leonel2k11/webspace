@@ -1,14 +1,6 @@
 {
-	"name": "webtop",
+	"name": "webspace",
     "service": "ubuntu",
     "dockerComposeFile": "docker-compose.yml",
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-	"forwardPorts": [
-        3000
-    ],
-    "portsAttributes": {
-        "3000": {
-            "label": "webspace"
-        }
-    }
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
 }
