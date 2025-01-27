@@ -26,16 +26,3 @@ services:
     #  - /dev/dri:/dev/dri #optional
     shm_size: "1gb" #optional
     restart: unless-stopped
-
-  tailscale:
-    container_name: tailscale
-    hostname: tailscale
-    image: tailscale/tailscale:stable
-    volumes:
-      - /dev/net/tun:/dev/net/tun # Required for tailscale to work
-    cap_add: # Required for tailscale to work
-      - net_admin
-      - sys_module
-    command: tailscaled
-    privileged: true
-    restart: unless-stopped
