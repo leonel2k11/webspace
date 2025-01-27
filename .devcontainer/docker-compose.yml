@@ -1,4 +1,3 @@
----
 services:
   ubuntu:
     image: mcr.microsoft.com/devcontainers/universal:linux
@@ -7,35 +6,20 @@ services:
     volumes:
       - ..:/workspace:cached
 
-  webtop:
-    image: lscr.io/linuxserver/webtop:latest
-    #build: .
-    container_name: webtop
-    security_opt:
-      - seccomp:unconfined #optional
+  webspace:
+    image: ghcr.io/simonhaas/images/webspace:main
+    container_name: webspace
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
-      - SUBFOLDER=/ #optional
-      - TITLE=Webtop #optional
     ports:
       - 3000:3000
-      #- 3001:3001
-    # devices:
-    #  - /dev/dri:/dev/dri #optional
-    shm_size: "1gb" #optional
-    restart: unless-stopped
-
-  tailscale:
-    container_name: tailscale
-    hostname: tailscale
-    image: tailscale/tailscale:stable
-    volumes:
-      - /dev/net/tun:/dev/net/tun # Required for tailscale to work
-    cap_add: # Required for tailscale to work
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
       - net_admin
       - sys_module
-    command: tailscaled
-    privileged: true
+    shm_size: "1gb"
     restart: unless-stopped
+    command: tailscaled
