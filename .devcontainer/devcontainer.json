@@ -1,6 +1,6 @@
 {
 	"name": "webspace",
-    "service": "ubuntu",
+    "service": "webspace",
     "dockerComposeFile": "docker-compose.yml",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
     "forwardPorts": [
