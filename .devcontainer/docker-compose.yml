@@ -1,11 +1,12 @@
 services:  
   webspace:
-    image: ghcr.io/simonhaas/images/webspace:main
+    image: lscr.io/linuxserver/webtop:debian-xfce
     container_name: webspace
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
+    custom_user: leonel
     ports:
       - 3000:3000
     devices:
