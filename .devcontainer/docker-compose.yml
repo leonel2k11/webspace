@@ -6,7 +6,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
-    custom_user: leonel
+      - CUSTOM_USER=leonel
     ports:
       - 3000:3000
     devices:
