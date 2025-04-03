@@ -1,11 +1,4 @@
-services:
-  ubuntu:
-    image: ubuntu
-    container_name: ubuntu
-    restart: unless-stopped
-    volumes:
-      - ..:/workspace:cached
-
+services:  
   webspace:
     image: ghcr.io/simonhaas/images/webspace:main
     container_name: webspace
